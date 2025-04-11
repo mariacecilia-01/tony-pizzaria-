@@ -1,41 +1,43 @@
-:root{
+:root {
     --primary-color: #F07807;
     --secundary-color: #F7E5D8;
+    --default-shadow: 0px 4px 8px #0008;
+    --default-pading: 0 80px;
 }
 
-*{
+* {
     padding: 0;
     margin: 0%;
     box-sizing: border-box;
 }
 
 
-a{
+a {
     text-decoration: none;
     color: inherit;
 }
 
-ul, ol, li{
+ul, ol, li {
     list-style: none;
 }
 
-body{
-    padding: 0 80px;
+body {
     font-family: "Poppins", sans-serif;
-    color: #F7E5D8;
+    background-color: var(--secundary-color);
 }
 
-header{
+header {
     position: fixed;
     height: 60px;
-    width: calc(100% - 160px);
+    width: 100vw;
     top: 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: var(--default-pading);
 }
 
-header ul{
+header menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -43,42 +45,65 @@ header ul{
     font-size: 1rem;
 }
 
-header li{
+header li {
     padding: 4px 8px;
     transition: .5s;
-    
+
 }
 
-header li:hover{
+header li:hover {
     background-color: var(--secundary-color);
-    box-shadow: 0px 4px 8px #0005;
+    box-shadow: var(--default-shadow);
+
 
 
 }
 
-.login{
+.login {
     height: 48px;
     width: 120px;
     border-radius: 12px;
     border: none;
-    color:#F7E5D8;
-    box-shadow: 0px 4px 8px #0005;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
+    background-color: var(--secundary-color);
+    box-shadow: var(--default-shadow);
 }
 
-span{
+.login:hover {
+    box-shadow: var(--default-shadow);
+}
+
+span {
     color: var(--primary-color);
 }
 
-main{
+main {
     /* background-color: blueviolet; */
-    height: 500px;
+
 }
 
-footer{
+section{
+    height: 100vh;
+    padding: var(--default-pading);
+}
+.home{
+    background-color: var(--secundary-color);
+    background-image: url(./img/bg-home.svg);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 60vw;
+}
+.cardapio{
+    background-color: plum;
+}
+.servicos{
+    background-color: lightblue;
+}
+
+footer {
     background-color: aqua;
     height: 526px;
 }
